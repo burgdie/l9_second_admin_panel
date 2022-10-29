@@ -31,7 +31,7 @@
 
             <span class="mx-3">Dashboard</span>
         </a>
-        <a class="flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25"
+        {{-- <a class="flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25"
             href="{{ route('admin.roles.index') }}">
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -54,7 +54,13 @@
             </svg>
 
             <span class="mx-3">Permissions</span>
-        </a>
+        </a> --}}
 
+        <x-sidebar-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
+            {{ __('Roles') }}
+        </x-sidebar-link>
+        <x-sidebar-link :href="route('admin.permissions.index')" :active="request()->routeIs('admin.permissions.index')">
+            {{ __('Permissions') }}
+        </x-sidebar-link>
     </nav>
 </div>
