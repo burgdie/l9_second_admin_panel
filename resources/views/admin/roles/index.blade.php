@@ -1,6 +1,10 @@
 <x-admin-layout>
 <div class="mt-12 max-w-6xl mx-auto">
-
+    <div class="flex justify-end m-2 p-2">
+        <a href="{{ route('admin.roles.create')  }}" class="px-4 py-2 bg-indigo-400 hover:bg-indigo-600 rounded text-white">
+            New Role
+        </a>
+    </div>
     <div class="relative overflow-x-auto shadow-md bg-gray-200 sm:rounde-lg">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
