@@ -55,12 +55,15 @@
 
             <span class="mx-3">Permissions</span>
         </a> --}}
-
+        <x-sidebar-link :href="route('admin.users.index')" :active="request()->routeIs('admin.users.index')">
+            {{ __('Users') }}
+        </x-sidebar-link>
         <x-sidebar-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
             {{ __('Roles') }}
         </x-sidebar-link>
         <x-sidebar-link :href="route('admin.permissions.index')" :active="request()->routeIs('admin.permissions.index')">
             {{ __('Permissions') }}
         </x-sidebar-link>
+
     </nav>
 </div>

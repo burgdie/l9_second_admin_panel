@@ -16,6 +16,9 @@
                         Name
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        Permissions
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         <span class="sr-only">Edit</span>
                     </th>
                 </tr>
@@ -29,6 +32,15 @@
                         </th>
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                             {{ $role->name }}
+
+                        </th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                          @forelse ($role->permissions as $rp)
+                            <span class="m-1 p-1 bg-indigo-300 rounded">{{ $rp->name }}</span>
+                          @empty
+                          <span class="text-sm text-gray-300">No Permissions</span>
+
+                          @endforelse
 
                         </th>
                         <td class="px-6 py-4 text-right">
